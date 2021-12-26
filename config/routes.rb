@@ -19,9 +19,9 @@ Rails.application.routes.draw do
   post '/main/anecdotes/anecdote:id/like', to: 'anecdotes#create_like'
   post '/main/anecdotes/anecdote:id/dislike', to: 'anecdotes#create_dislike'
   post '/main/anecdotes/anecdote:id/favourite', to: 'anecdotes#add_to_favourite'
-  delete 'main/anecdotes/anecdote:id/like', to: 'anecdotes#destroy_like'
-  delete 'main/anecdotes/anecdote:id/dislike', to: 'anecdotes#destroy_dislike'
-  delete 'main/anecdotes/anecdote:id', to: 'anecdotes#destroy_from_favourite'
+  delete '/main/anecdotes/anecdote:id/like', to: 'anecdotes#destroy_like'
+  delete '/main/anecdotes/anecdote:id/dislike', to: 'anecdotes#destroy_dislike'
+  delete '/main/anecdotes/anecdote:id', to: 'anecdotes#destroy_from_favourite'
   get '/favourite', to: 'anecdotes#favourite'
   get '/main', to: 'anecdotes#main'
 
