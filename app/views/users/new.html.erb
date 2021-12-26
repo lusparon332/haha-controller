@@ -1,0 +1,33 @@
+<%= link_to 'Назад', '/' %>
+
+<h3>
+  Это страница регистрации
+</h3>
+
+<br/>
+
+<div>
+  <%= @username %>
+  <label >
+  </label>
+
+  <br/>
+
+  <%= @password %>
+  <label >
+  </label>
+
+  <br/>
+
+  <%= @password_confirmation %>
+  <label >
+  </label>
+
+</div>
+
+<br/>
+
+<button>
+  <%= link_to @register, '/users' %>
+</button>
+
