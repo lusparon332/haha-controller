@@ -3,9 +3,11 @@
   Все анекдоты
 </h3>
 <ul>
-  <%= @anecdotes.each do |anecdote| %>
+  <%= while @i <= @anecdotes.count do %>
   <li>
-    <%= anecdote.text %>
+    <%= Anecdote.find_by_id(@i).text %>
+    <%- @i += 1 %>
   </li>
   <% end %>
+  <%- @i = 1 %>
 </ul>
