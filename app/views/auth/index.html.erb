@@ -1,0 +1,22 @@
+<%= link_to 'Назад', '/' %>
+
+<h3>
+  Авторизация
+</h3>
+
+<br/>
+
+<%= form_for @user, remote: true do |f| %>
+  <div class="field">
+    <%= f.label 'Email' %>
+    <%= f.text_field :login , type: :login %>
+  </div>
+  <div class="field">
+    <%= f.label 'Пароль' %>
+    <%= f.text_field :password ,  type: :password %>
+  </div>
+<% end %>
+
+<button>
+  <%= link_to 'Войти', '/main' %>
+</button>

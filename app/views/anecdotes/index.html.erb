@@ -1,0 +1,11 @@
+<%= link_to 'Назад', '/main' %>
+<h3>
+  Все анекдоты
+</h3>
+<ul>
+  <%= @anecdotes.each do |anecdote| %>
+  <li>
+    <%= anecdote.text %>
+  </li>
+  <% end %>
+</ul>

@@ -1,0 +1,30 @@
+<%= link_to 'Назад', '/' %>
+
+<h3>
+  Регистрация
+</h3>
+
+<br/>
+
+<%= form_for @user, remote: true do |f| %>
+  <div class="field">
+    <%= f.label 'Email' %>
+    <%= f.text_field :login , type: :login %>
+  </div>
+  <div class="field">
+    <%= f.label 'Пароль' %>
+    <%= f.text_field :password ,  type: :password %>
+  </div>
+  <div class="field">
+    <%= f.label 'Подтверждение пароля' %>
+    <%= f.text_field :password ,  type: :password %>
+  </div>
+  <div class="field">
+    <%= f.submit 'Зарегистироваться' %>
+  </div>
+<% end %>
+
+<button>
+  <%= link_to 'Зарегистрироваться', '/main' %>
+</button>
+

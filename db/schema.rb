@@ -15,17 +15,17 @@ ActiveRecord::Schema.define(version: 2021_12_26_145353) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "anekdots", force: :cascade do |t|
+  create_table "anecdotes", force: :cascade do |t|
     t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.string "login", null: false
     t.string "password", null: false
-    t.string "type", null: false
+    t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # регистрация
+  get '/users', to: 'users#new'
   post '/users', to: 'users#create'
 
   # авторизация
