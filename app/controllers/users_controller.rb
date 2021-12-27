@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
   def new
-    @username = 'Имя пользователя'
-    @password = 'Пароль'
-    @password_confirmation = 'Подтвердите пароль'
-    @register = 'Зарегистрироваться'
+    @user = User.new
   end
-  def create
 
+  def create
+    @user = User.create(params[:user])
+    if @user.valid?
+      redirect_to '/main'
+    else
+      redirect_to :new, alert: @user.errors.full_messages.join
+    end
   end
+
 end

@@ -1,6 +1,6 @@
 class AuthController < ApplicationController
   def index
-    @login = 'Войти'
+    @user = User.new
   end
 
   def create
