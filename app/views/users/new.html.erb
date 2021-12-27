@@ -1,33 +1,30 @@
 <%= link_to 'Назад', '/' %>
 
 <h3>
-  Это страница регистрации
+  Регистрация
 </h3>
 
 <br/>
 
-<div>
-  <%= @username %>
-  <label >
-  </label>
-
-  <br/>
-
-  <%= @password %>
-  <label >
-  </label>
-
-  <br/>
-
-  <%= @password_confirmation %>
-  <label >
-  </label>
-
-</div>
-
-<br/>
+<%= form_for @user, remote: true do |f| %>
+  <div class="field">
+    <%= f.label 'Email' %>
+    <%= f.text_field :login , type: :login %>
+  </div>
+  <div class="field">
+    <%= f.label 'Пароль' %>
+    <%= f.text_field :password ,  type: :password %>
+  </div>
+  <div class="field">
+    <%= f.label 'Подтверждение пароля' %>
+    <%= f.text_field :password ,  type: :password %>
+  </div>
+  <div class="field">
+    <%= f.submit 'Зарегистироваться' %>
+  </div>
+<% end %>
 
 <button>
-  <%= link_to @register, '/users' %>
+  <%= link_to 'Зарегистрироваться', '/main' %>
 </button>
 

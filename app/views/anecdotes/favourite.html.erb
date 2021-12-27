@@ -1,0 +1,10 @@
+<%= link_to 'Назад', '/main' %>
+
+<h3>
+  Наше любимое студенческое
+</h3>
+<ul>
+    <li>
+      <%= Anecdote.find_by_id(3).text %>
+    </li>
+</ul>
